@@ -17,6 +17,7 @@ var errorhandler = require('errorhandler');
 var app = express();
 
 app.set('port', config.get('port'));
+app.engine('ejs', require('ejs-locals')); //layout partial block
 app.set('views', path.join(__dirname, 'views'));// or 'views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
@@ -37,9 +38,9 @@ app.use(bodyParser.json()); // from json разбирает тело запро�
 //app.get('/users', user.list);
 
 app.get('/', function (req, res) {
-  res.render('index', {
-  	body: '<b>hello</b>'
-  });
+  res.render('index' /* , {
+  	//body: '<b>hello</b>'
+  }*/ );
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -56,9 +57,6 @@ app.use(function(err, req, res, next) {
 });
 
 /*
-
-app.use('/', index);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

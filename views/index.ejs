@@ -1,17 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Hello, world!</title>
-</head>
-<body>
-<section class="container">
-  
-  <h1>GOOOD DAMNE</h1>
+<% layout('layout/page') %>
+<% block('title', 'im the godd'); %>
 
-  <%=body%>
-  <%-body%>
-</section>
-  
-</body>
-</html>
+<p class="lead">Всем привет</p>
+<p>В этом примере есть:</p>
+
+<ol>
+  <li>Конфигурация при помощи nconf</li>
+  <li>Страницы и веб-сервисы на Express</li>
+  <li>Шаблонизация на EJS (+partials, helpers, layouts)</li>
+  <li>Авторизация, сессии в Connect</li>
+  <li>Защищённые сервисы и страницы (для авторизованных)</li>
+  <li>Чат через COMET (Sock.JS, также можно Socket.IO и WS.JS)</li>
+  <li>Работа с базой данных (MongoDB, Mongoose)</li>
+  <li>Асинхронные цепочки вызовов (Async)</li>
+  <li>Логирование (winston + фабрика логгеров по модулю)</li>
+</ol>
+
+
+<p>Требования к примеру:</p>
+
+<ol>
+  <li>Простой и понятный код</li>
+  <li>Архитектура пригодна для разработки и расширения</li>
+  <li>Можно запустить в кластере</li>
+</ol>
+
